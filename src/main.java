@@ -5,7 +5,7 @@ public class main {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Write in an integer number: ");
 		System.out.print(">>> ");
-		int entry = input.nextInt();
+		long entry = input.nextInt();
 		int bitsNeeded = 1;
 		
 		
@@ -40,6 +40,7 @@ public class main {
 		for (int i = bitsNeeded - 1; i >= 0; i --) {
 			binary += num[i];
 		}
+		// int a = Integer.parseInt(binary);
 		System.out.println(binary);
 		System.out.printf(">>> %d bits long\n", bitsNeeded);
 		
