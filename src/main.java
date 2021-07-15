@@ -3,7 +3,7 @@ public class main {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Write in an integer number: ");
+		System.out.println("Write an integer number: ");
 		System.out.print(">>> ");
 		long entry = input.nextInt();
 		int bitsNeeded = 1;
@@ -41,8 +41,20 @@ public class main {
 			binary += num[i];
 		}
 		// int a = Integer.parseInt(binary);
-		System.out.println(binary);
-		System.out.printf(">>> %d bits long\n", bitsNeeded);
+		System.out.println(binary + " binary");
+		System.out.println();
+		System.out.printf("<<< %d bits long\n", bitsNeeded);
+		int bytes = 0;
+		if (bitsNeeded >= 8) {
+			bytes = bitsNeeded / 8;
+			int bitsRest = bitsNeeded % 8;
+			if (bitsRest == 0) {
+				System.out.printf("Also... %d B long.\n", bytes);
+			}
+			else {
+				System.out.printf("Also... %d B and %d b long.\n", bytes, bitsRest);
+			}
+		}
 		
 	}
 
